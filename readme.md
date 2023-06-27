@@ -1,5 +1,5 @@
 # Pet Weights Web
-A flask app that serves a website that is used to log weights to a LiteDB database with HTTP calls.
+A flask app that serves a LAN website that is used to log weights to a LiteDB database with HTTP calls.
 
 Note! Before deployment check that the `raspIp` variable is set correctly in the script.js file
 
