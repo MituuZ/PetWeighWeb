@@ -49,7 +49,16 @@ async function submitForm(event) {
         });
 
         if (!response.ok) {
+            let errorMsg = `There was a problem processing your request. Please try again. (HTTP status: ${response.status})`;
+            alert(errorMsg);
             throw new Error(`HTTP error! status: ${response.status}`);
+        } else {
+            petNames.forEach(name => {
+                document.getElementById(name).value = '';
+                document.getElementById(name + 'Diff').innerText = '';
+            });
+
+            document.getElementById('base').value = '';
         }
     } catch (error) {
         console.log('There was a problem with the fetch operation: ' + error.message);
