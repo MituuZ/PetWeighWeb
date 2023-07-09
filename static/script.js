@@ -1,7 +1,7 @@
 // script.js
 
 const petNames = ['pet1', 'pet2', 'pet3', 'pet4'];
-const rapsIp = 'http://99.99.99.99:5000';
+const raspIp = 'http://99.99.99.99:5000';
 
 function initialize() {
     let baseInput = document.getElementById('base');
@@ -40,7 +40,7 @@ async function submitForm(event) {
     });
 
     try {
-        const response = await fetch(rapsIp, {
+        const response = await fetch(raspIp, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
